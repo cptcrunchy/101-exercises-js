@@ -374,14 +374,14 @@ assert(remainder(7, 5), 2, "Exercise 37");
 addToDone("Exercise 37 is correct.");
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
-const sumOfSquares = (n1, n2) => (n1 * n1) + (n2 * n2);
+const sumOfSquares = (n1, n2) => square(n1) + square(n2);
 assert(sumOfSquares(3, 2), 13, "Exercise 38");
 assert(sumOfSquares(5, 2), 29, "Exercise 38");
 assert(sumOfSquares(2, 4), 20, "Exercise 38");
 addToDone("Exercise 38 is correct.");
 // Exercise 39
 // Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
-const timesTwoPlusThree = (n) => (n * 2) + 3;
+const timesTwoPlusThree = (n) => double(n) + 3;
 assert(timesTwoPlusThree(0), 3, "Exercise 39");
 assert(timesTwoPlusThree(1), 5, "Exercise 39");
 assert(timesTwoPlusThree(2), 7, "Exercise 39");
@@ -398,14 +398,14 @@ assert(areaOfRectangle(5.3, 10.3), 54.59, "Exercise 40");
 addToDone("Exercise 40 is correct.");
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
-const areaOfCircle = (r) => Math.pow(r, 2) * Math.PI;
+const areaOfCircle = (r) => square(r) * Math.PI;
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
 assert(areaOfCircle(7), 153.93804002589985, "Exercise 41");
 addToDone("Exercise 41 is correct.");
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
-const circumference = (n) => (n * 2) * Math.PI;
+const circumference = (n) => double(n) * Math.PI;
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
 assert(circumference(7), 43.982297150257104, "Exercise 42");
@@ -726,7 +726,7 @@ assert(getUniqueValues(["mary", "had", "a", "little", "lamb", "little", "lamb", 
 addToDone("Exercise 83 is correct.");
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
-const elementsTimesTwo = (args) => args.map(v => v * 2);
+const elementsTimesTwo = (args) => args.map(double);
 assert(elementsTimesTwo([1, 2, 3]), [2, 4, 6], "Exercise 84");
 assert(elementsTimesTwo([0, 0, 0]), [0, 0, 0], "Exercise 84");
 assert(elementsTimesTwo([5, 10, 15]), [10, 20, 30], "Exercise 84");
@@ -740,7 +740,7 @@ assert(flatten([["tomato", "mango", "kiwi"], ["eggplant", "broccoli"]]), ["tomat
 addToDone("Exercise 85 is correct.");
 // Exercise 86
 // Write a function definition named addOneToArray that adds one to every number in an array
-const addOneToArray = (args) => args.map(v => v + 1);
+const addOneToArray = (args) => args.map(addOne);
 assert(addOneToArray([1, 2, 3]), [2, 3, 4], "Exercise 86");
 assert(addOneToArray([4, 4, 4]), [5, 5, 5], "Exercise 86");
 assert(addOneToArray([9, 10, 11]), [10, 11, 12], "Exercise 86");
